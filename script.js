@@ -1,13 +1,19 @@
-let totalValue = 0;
-let numberOfItems = prompt("How many items do you want to add to your cart?");
-for (let i = 0; i < numberOfItems; i++) {
-  let itemName = prompt("Enter the name of item " + (i + 1) + ":");
-  let itemPrice = parseFloat(prompt("Enter the price of " + itemName + ":"));
-  let itemQuantity = parseInt(
-    prompt("Enter the quantity of " + itemName + ":")
+let valorTotal = 0;
+let numeroDeArticulos = prompt(
+  "¿Cuántos artículos deseas agregar a tu carrito?"
+);
+for (let i = 0; i < numeroDeArticulos; i++) {
+  let nombreArticulo = prompt(
+    "Ingrese el nombre del artículo " + (i + 1) + ":"
   );
-  if (itemQuantity > 0) {
-    totalValue += itemPrice * itemQuantity;
+  let precioArticulo = parseFloat(
+    prompt("Ingrese el precio de " + nombreArticulo + ":")
+  );
+  let cantidadArticulo = parseInt(
+    prompt("Ingrese la cantidad de " + nombreArticulo + ":")
+  );
+  if (cantidadArticulo > 0) {
+    valorTotal += precioArticulo * cantidadArticulo;
   }
 }
-alert("The total value of items in your cart is $" + totalValue);
+alert("El valor total de los artículos en tu carrito es $" + valorTotal);
